@@ -18,14 +18,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
           backgroundColor: backGroundColor,
           appBar: AppBar(
             elevation: 1,
-            backgroundColor: whiteColor,
+            backgroundColor: greenButtonColor,
             leading: InkWell(
               onTap: (){
                 Navigator.pop(context);
               },
               child: const Icon(
                 Icons.arrow_back,
-                color: blackColor,
+                color: whiteColor,
               ),
             ),
             titleSpacing: 0,

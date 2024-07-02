@@ -87,7 +87,7 @@ TextStyle signUpOptionTextStyle = const TextStyle(
 
 TextStyle appBarTitleTextStyle = const TextStyle(
   fontFamily: _secondaryFont,
-  color: blackColor,
+  color: whiteColor,
   fontSize: 20,
 );
 

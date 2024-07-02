@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../styles/colors.dart';
 import '../../styles/text_styles.dart';
+import '../product/product_list_screen.dart';
 import '../widget/common_button.dart';
 import '../widget/text_field.dart';
 
@@ -114,6 +115,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     final isValidPassword = validatePassword(passwordController.text);
     final isValidConfirmPassword = validateConfirmPassword(confirmPasswordController.text);
     final isValidPhoneNumber = validatePhoneNumber(nameController.text);
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const ProductListScreen()));
   }
 
   @override

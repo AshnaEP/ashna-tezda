@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:task/feature/product/product_detail_screen.dart';
+import 'package:task/feature/user/profile_screen.dart';
 
 import '../../models/product_list_model.dart';
 import '../../services/product_list_api_service.dart';
@@ -33,18 +34,23 @@ class _ProductListScreenState extends State<ProductListScreen> {
             backgroundColor: Colors.white,
             elevation: 2,
             shadowColor: Colors.grey,
-            actions: const [
+            actions: [
               Padding(
                 padding: EdgeInsets.only(right: 20),
                 child: Row(
                   children:  [
-                  CircleAvatar(
-                  backgroundColor: greenButtonColor,
-                  radius: 20,
-                  child: Icon(
-                    Icons.person_2_outlined,
-                  )
-                ),
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (_) => const ProfileScreen()));
+                    },
+                    child: const CircleAvatar(
+                    backgroundColor: greenButtonColor,
+                    radius: 20,
+                    child: Icon(
+                      Icons.person_2_outlined,
+                    )
+                                    ),
+                  ),
                   ],
                 ),
               )
@@ -57,11 +63,22 @@ class _ProductListScreenState extends State<ProductListScreen> {
               future: futureProducts,
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(child: CircularProgressIndicator());
+                  return SizedBox(
+                    height: MediaQuery.of(context).size.height / 1.3,
+                    child: const Center(
+                        child: CircularProgressIndicator(
+                          color: greenButtonColor,
+                        )),
+                  );
                 } else if (snapshot.hasError) {
                   return Center(child: Text('Error: ${snapshot.error}'));
                 } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                  return Center(child: Text('No products found'));
+                  return SizedBox(
+                    height: MediaQuery.of(context).size.height / 1.3,
+                      child: const Center(
+                          child: Text('No products found')
+                      )
+                  );
                 } else {
                   return StaggeredGridView.countBuilder(
                     physics: const NeverScrollableScrollPhysics(),

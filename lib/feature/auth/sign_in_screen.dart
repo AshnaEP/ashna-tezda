@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task/feature/product/product_list_screen.dart';
 import 'package:task/styles/colors.dart';
 
 import '../../styles/text_styles.dart';
@@ -56,7 +57,9 @@ class _SignInScreenState extends State<SignInScreen> {
     }
   }
 
-  void onLogin() async{}
+  void onLogin() async{
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const ProductListScreen()));
+  }
 
   @override
   Widget build(BuildContext context) {
