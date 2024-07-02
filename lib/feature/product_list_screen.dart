@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:task/feature/product_detail_screen.dart';
 
 import '../models/product_list_model.dart';
 import '../services/product_list_api_service.dart';
@@ -42,7 +43,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                   return Center(child: Text('No products found'));
                 } else {
                   return StaggeredGridView.countBuilder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     crossAxisCount: 2,
                     itemCount: 8,
@@ -131,12 +132,18 @@ class _ProductListScreenState extends State<ProductListScreen> {
                           ),
                         ),
                         onTap: () {
-                          // Navigator.of(context).push(
-                          //   MaterialPageRoute(
-                          //     builder: (context) =>
-                          //         ProductDetail('${data.list[index].id!}',data.list[index].isWishlist,true,false,false),
-                          //   ),
-                          // );
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => ProductDetailScreen(
+                                  product.image,
+                                  product.title,
+                                  product.description,
+                                  product.price,
+                                  product.category,
+                                  product.rating!.rate,
+                              )
+                            ),
+                          );
                         },
                       );
                     },
