@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/feature/auth/sign_in_screen.dart';
+import 'package:task/feature/auth/sign_up_screen.dart';
 
 import '../../styles/colors.dart';
 import '../../styles/text_styles.dart';
@@ -60,7 +61,7 @@ class _SignInTabState extends State<SignInTab> {
             body: const TabBarView(
             children: [
                SignInScreen(),
-               SignInScreen(),
+               SignUpScreen(),
             ],
             ),
           ),
