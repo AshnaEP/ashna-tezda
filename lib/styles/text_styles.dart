@@ -54,3 +54,33 @@ TextStyle signUpTextStyle = const TextStyle(
   fontFamily: _secondaryFont,
   fontSize: 16,
 );
+
+TextStyle buttonTextStyle = const TextStyle(
+  fontFamily: _primaryFont,
+  color: whiteColor,
+  fontSize: 16,
+);
+
+TextStyle hintTextStyle = const TextStyle(
+  fontFamily: _primaryFont,
+  fontSize: 16,
+  color: hintColor,
+);
+
+TextStyle textFieldInputStyle = const TextStyle(
+  fontFamily: _primaryFont,
+  color: blackColor,
+  fontSize: 16,
+);
+
+TextStyle forgotPasswordTextStyle = const TextStyle(
+  fontFamily: _primaryFont,
+  fontSize: 14,
+  color: hintColor,
+);
+
+TextStyle signUpOptionTextStyle = const TextStyle(
+  fontFamily: _secondaryFont,
+  fontSize: 14,
+  color: greenTextColor,
+);
