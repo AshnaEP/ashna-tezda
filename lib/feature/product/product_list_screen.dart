@@ -29,6 +29,27 @@ class _ProductListScreenState extends State<ProductListScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            elevation: 2,
+            shadowColor: Colors.grey,
+            actions: const [
+              Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Row(
+                  children:  [
+                  CircleAvatar(
+                  backgroundColor: greenButtonColor,
+                  radius: 20,
+                  child: Icon(
+                    Icons.person_2_outlined,
+                  )
+                ),
+                  ],
+                ),
+              )
+            ],
+          ),
             backgroundColor: backGroundColor,
           body: SingleChildScrollView(
             padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
