@@ -4,6 +4,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../models/product_list_model.dart';
 import '../services/product_list_api_service.dart';
 import '../styles/colors.dart';
+import '../styles/text_styles.dart';
 
 class ProductListScreen extends StatefulWidget {
   const ProductListScreen({super.key});
@@ -109,9 +110,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
                               ),
                               const SizedBox(height: 10),
                               Padding(
-                                padding: const EdgeInsets.only(left: 12),
+                                padding: const EdgeInsets.only(left: 12,right: 12),
                                 child: Text('${product.title}',
-                                  // style: plantTypeText
+                                  style: plantNameTextStyle
                                 ),
                               ),
                               const SizedBox(height: 10),
@@ -120,7 +121,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                 child: Row(
                                   children: [
                                     Text('\$${product.price.toString()}',
-                                      // style: priceText
+                                      style: priceTextStyle
                                     ),
                                   ],
                                 ),
