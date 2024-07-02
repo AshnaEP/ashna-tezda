@@ -84,3 +84,27 @@ TextStyle signUpOptionTextStyle = const TextStyle(
   fontSize: 14,
   color: greenTextColor,
 );
+
+TextStyle appBarTitleTextStyle = const TextStyle(
+  fontFamily: _secondaryFont,
+  color: blackColor,
+  fontSize: 20,
+);
+
+TextStyle profileTitleTextStyle = const TextStyle(
+  fontFamily: _primaryFont,
+  color: profileTitleColor,
+  fontSize: 12,
+);
+
+TextStyle profileDataTextStyle = const TextStyle(
+  fontFamily: _secondaryFont,
+  color: blackColor,
+  fontSize: 15,
+);
+
+TextStyle nameTextStyle = const TextStyle(
+  fontFamily: _tertiaryFont,
+  color: blackColor,
+  fontSize: 18,
+);

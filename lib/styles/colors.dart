@@ -17,3 +17,7 @@ const ratingStarColor = Color.fromRGBO(255, 191, 0, 1);
 const categoryTextColor = Color.fromRGBO(80,80,80,1);
 
 const hintColor = Color.fromRGBO(147, 147, 147,1);
+
+const profileTitleColor = Color.fromRGBO(99, 21, 233,1);
+
+const dividerColor = Color.fromRGBO(247, 247, 247, 1);

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task/feature/auth/sing_in_tab.dart';
 import 'package:task/feature/product/product_list_screen.dart';
+import 'package:task/feature/user/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ProductListScreen(),
+      home: const ProfileScreen(),
     );
   }
 }
