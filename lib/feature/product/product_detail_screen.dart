@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-import '../styles/colors.dart';
-import '../styles/text_styles.dart';
+import '../../styles/colors.dart';
+import '../../styles/text_styles.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   dynamic imageUrl;

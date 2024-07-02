@@ -49,3 +49,8 @@ TextStyle priceTextDetailStyle = const TextStyle(
   color: greenTextColor,
   fontSize: 18,
 );
+
+TextStyle signUpTextStyle = const TextStyle(
+  fontFamily: _secondaryFont,
+  fontSize: 16,
+);
