@@ -92,42 +92,6 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                       ),
                                     ),
                                   ),
-                                  // Padding(
-                                  //   padding: EdgeInsets.only(top: 1, right: 1),
-                                  //   child: Row(
-                                  //     mainAxisAlignment: MainAxisAlignment.end,
-                                  //     children: [
-                                  //       IconButton(
-                                  //         onPressed: () {
-                                  //           if (storedToken.isEmpty) {
-                                  //             Stopwatch stopwatch = new Stopwatch()..start();
-                                  //             data.list[index].isWishlist ?? false
-                                  //                 ? productListProvider
-                                  //                 .deleteWishlist(data.list[index].id)
-                                  //                 : productListProvider
-                                  //                 .addToWishlist(data.list[index].id);
-                                  //             print('doSomething() executed in ${stopwatch.elapsed}');
-                                  //             Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomePage()));
-                                  //           } else {
-                                  //             Navigator.push(
-                                  //                 context,
-                                  //                 MaterialPageRoute(
-                                  //                     builder: (context) => LoginPage()));
-                                  //           }
-                                  //         },
-                                  //         icon: data.list[index].isWishlist ?? false
-                                  //             ? Icon(
-                                  //           Icons.favorite,
-                                  //           color: Colors.red[700],
-                                  //         )
-                                  //             : Icon(
-                                  //           Icons.favorite_border,
-                                  //           color: Colors.white,
-                                  //         ),
-                                  //       )
-                                  //     ],
-                                  //   ),
-                                  // ),
                                 ],
                               ),
                               const SizedBox(height: 10),
